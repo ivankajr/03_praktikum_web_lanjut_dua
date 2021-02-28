@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\BlogDetailController;
+use App\Http\Controllers\ProjectDetailController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +18,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog-detail', [BlogDetailController::class, 'index'])->name('blog-detail');
+Route::get('/project-detail', [ProjectDetailController::class, 'index'])->name('project-detail');

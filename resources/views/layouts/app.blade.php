@@ -1,196 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
 
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="TemplateMo">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
-
-    <title>{{ config('app.name', 'Finance Business') }}</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="{{ asset('js/vendor/bootstrap/css/bootstrap.min.css') }}">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="{{ asset('css/fontawesome.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/templatemo-finance-business.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/owl.css') }}">
+     <title>{{ config('app.name', 'Digital Trends')}}</title>
 <!--
 
-Finance Business TemplateMo
+DIGITAL TREND
 
-https://templatemo.com/tm-545-finance-business
+https://templatemo.com/tm-538-digital-trend
 
 -->
-  </head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <body>
+     <link rel="stylesheet" href= {{ asset('css/bootstrap.min.css') }}>
+     <link rel="stylesheet" href={{ asset('css/font-awesome.min.css') }}>
+     <link rel="stylesheet" href={{ asset('css/aos.css') }}>
+     <link rel="stylesheet" href={{ asset('css/owl.carousel.min.css') }}>
+     <link rel="stylesheet" href={{ asset('css/owl.theme.default.min.css') }}>
 
-    <!-- ***** Preloader Start ***** -->
-    <div id="preloader">
-        <div class="jumper">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>  
-    <!-- ***** Preloader End ***** -->
+     <!-- MAIN CSS -->
+     <link rel="stylesheet" href={{ asset('css/templatemo-digital-trend.css') }}>
 
-    <!-- Header -->
-    <div class="sub-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 col-xs-12">
-            <ul class="left-info">
-              <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 09:00-17:00</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>090-080-0760</a></li>
-            </ul>
-          </div>
-          <div class="col-md-4">
-            <ul class="right-icons">
-              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+</head>
+<body>
 
-    <header class="">
-      <nav class="navbar navbar-expand-lg">
+     <!-- MENU BAR -->
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>{{ config('app.name', 'Finance Business') }}</h2></a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="services.html">Our Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact Us</a>
-              </li>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="{{route('index')}}">
+              <i class="fa fa-line-chart"></i>
+              {{ config('app.name', 'Digital Trends')}}
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link smoothScroll">Studio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#project" class="nav-link smoothScroll">Our Works</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('blog')}}" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{route('contact')}}" class="nav-link contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </nav>
-    </header>
+    </nav>
 
     @yield('content')
 
-    <!-- Footer Starts Here -->
-    <footer>
+    <footer class="site-footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-3 footer-item">
-            <h4>Finance Business</h4>
-            <p>Vivamus tellus mi. Nulla ne cursus elit,vulputate. Sed ne cursus augue hasellus lacinia sapien vitae.</p>
-            <ul class="social-icons">
-              <li><a rel="nofollow" href="https://fb.com/templatemo" target="_blank"><i class="fa fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+
+          <div class="col-lg-5 mx-lg-auto col-md-8 col-10">
+            <h1 class="text-white" data-aos="fade-up" data-aos-delay="100">We make creative <strong>brands</strong> only.</h1>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="200">
+            <h4 class="my-4">Contact Info</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-phone mr-2 footer-icon"></i> 
+              +99 080 070 4224
+            </p>
+
+            <p>
+              <a href="#">
+                <i class="fa fa-envelope mr-2 footer-icon"></i>
+                hello@company.com
+              </a>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 col-12" data-aos="fade-up" data-aos-delay="300">
+            <h4 class="my-4">Our Studio</h4>
+
+            <p class="mb-1">
+              <i class="fa fa-home mr-2 footer-icon"></i> 
+              Av. Lúcio Costa - Barra da Tijuca, Rio de Janeiro - RJ, Brazil
+            </p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto text-center col-md-8 col-12" data-aos="fade-up" data-aos-delay="400">
+            <p class="copyright-text">Copyright &copy; 2020 Your Company
+            <br>
+            <a rel="nofollow noopener" href="https://templatemo.com">Design: TemplateMo</a></p>
+          </div>
+
+          <div class="col-lg-4 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
+            
+            <ul class="footer-link">
+              <li><a href="#">Stories</a></li>
+              <li><a href="#">Work with us</a></li>
+              <li><a href="#">Privacy</a></li>
             </ul>
           </div>
-          <div class="col-md-3 footer-item">
-            <h4>Useful Links</h4>
-            <ul class="menu-list">
-              <li><a href="#">Vivamus ut tellus mi</a></li>
-              <li><a href="#">Nulla nec cursus elit</a></li>
-              <li><a href="#">Vulputate sed nec</a></li>
-              <li><a href="#">Cursus augue hasellus</a></li>
-              <li><a href="#">Lacinia ac sapien</a></li>
+
+          <div class="col-lg-3 mx-lg-auto col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
+            <ul class="social-icon">
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-twitter"></a></li>
+              <li><a href="#" class="fa fa-dribbble"></a></li>
+              <li><a href="#" class="fa fa-behance"></a></li>
             </ul>
           </div>
-          <div class="col-md-3 footer-item">
-            <h4>Additional Pages</h4>
-            <ul class="menu-list">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">How We Work</a></li>
-              <li><a href="#">Quick Support</a></li>
-              <li><a href="#">Contact Us</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-            </ul>
-          </div>
-          <div class="col-md-3 footer-item last-item">
-            <h4>Contact Us</h4>
-            <div class="contact-form">
-              <form id="contact footer-contact" action="" method="post">
-                <div class="row">
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="name" type="text" class="form-control" id="name" placeholder="Full Name" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12 col-md-12 col-sm-12">
-                    <fieldset>
-                      <input name="email" type="text" class="form-control" id="email" pattern="[^ @]*@[^ @]*" placeholder="E-Mail Address" required="">
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your Message" required=""></textarea>
-                    </fieldset>
-                  </div>
-                  <div class="col-lg-12">
-                    <fieldset>
-                      <button type="submit" id="form-submit" class="filled-button">Send Message</button>
-                    </fieldset>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
+
         </div>
       </div>
     </footer>
-    
-    <div class="sub-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <p>Copyright &copy; 2020 Financial Business Co., Ltd.
-            
-            - Design: <a rel="nofollow noopener" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
-    <!-- Additional Scripts -->
-    <script src="{{ asset('js/custom.js') }}"></script>
-    <script src="{{ asset('js/owl.js') }}"></script>
-    <script src="{{ asset('js/slick.js') }}"></script>
-    <script src="{{ asset('js/accordions.js') }}"></script>
+     <!-- SCRIPTS -->
+     <script src={{ asset('js/jquery.min.js') }}></script>
+     <script src={{ asset('js/bootstrap.min.js') }}></script>
+     <script src={{ asset('js/aos.js') }}></script>
+     <script src={{ asset('js/owl.carousel.min.js') }}></script>
+     <script src={{ asset('js/smoothscroll.js') }}></script>
+     <script src={{ asset('js/custom.js') }}></script>
 
-    <script language = "{{ asset('text/Javascript') }}"> 
-      cleared[0] = cleared[1] = cleared[2] = 0; //set a cleared flag for each field
-      function clearField(t){                   //declaring the array outside of the
-      if(! cleared[t.id]){                      // function makes it static and global
-          cleared[t.id] = 1;  // you could use true and false, but that's more typing
-          t.value='';         // with more chance of typos
-          t.style.color='#fff';
-          }
-      }
-    </script>
-
-  </body>
+</body>
 </html>
+
+
